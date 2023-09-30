@@ -22,22 +22,22 @@ public class TipCalculator {
     }
 
     public double tipAmount() {
-        return (totalBillBeforeTip * tipPercentage / 100.0);
+        return (Math.round(totalBillBeforeTip * tipPercentage * 100.0) / 10000);
     }
 
     public double totalBill() {
-        return ((totalBillBeforeTip * tipPercentage / 100.0) + totalBillBeforeTip);
+        return (Math.round(((totalBillBeforeTip * tipPercentage / 100.0) + totalBillBeforeTip) * 100) / 100);
     }
 
     public double perPersonCostBeforeTip() {
-        return (totalBillBeforeTip / numPeople);
+        return (Math.round(totalBillBeforeTip / numPeople * 100) / 100);
     }
 
     public double perPersonTipAmount() {
-        return  ((totalBillBeforeTip * tipPercentage / 100.0) / numPeople);
+        return (Math.round((totalBillBeforeTip * tipPercentage / 100.0) / numPeople * 100) / 100);
     }
 
     public double perPersonTotalCost() {
-        return (((totalBillBeforeTip * tipPercentage / 100.0) + totalBillBeforeTip) / numPeople);
+        return (Math.round(((totalBillBeforeTip * tipPercentage / 100.0) + totalBillBeforeTip) / numPeople * 100) / 100);
     }
 }
