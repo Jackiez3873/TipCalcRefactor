@@ -8,7 +8,7 @@ public class TipCalculatorRunner {
         System.out.println("What's the tip percentage? (0-100, Whole Number):");
         int tipPercentage = scan.nextInt();
         TipCalculator calc = new TipCalculator(numOfPeople , tipPercentage);
-        double cost = 0;
+        double cost = 0.0;
         while (cost != -1.0) {
             System.out.print("Enter a cost in dollars and cents, e.g. 12.50 (-1 or -1.0 to end): ");
             cost = scan.nextDouble();
