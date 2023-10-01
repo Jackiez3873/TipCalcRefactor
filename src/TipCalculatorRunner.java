@@ -1,6 +1,4 @@
 import java.util.Scanner;
-import java.util.ArrayList;
-import java.util.List;
 public class TipCalculatorRunner {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
@@ -14,10 +12,10 @@ public class TipCalculatorRunner {
         while (cost != -1.0) {
             System.out.print("Enter a cost in dollars and cents, e.g. 12.50 (-1 or -1.0 to end): ");
             cost = scan.nextDouble();
-            calc.addMeal(cost);
             if (cost == -1.0) {
                 break;
             }
+            calc.addMeal(cost);
         }
         System.out.println("-------------------------------- ");
         System.out.println("Total bill before tip: $" + calc.getTotalBillBeforeTip());
@@ -28,13 +26,5 @@ public class TipCalculatorRunner {
         System.out.println("Tip per person: $" + calc.perPersonTipAmount());
         System.out.println("Total cost per person: $" + calc.perPersonTotalCost());
         System.out.println("-------------------------------- ");
-
-
-
-
-
-
-
-
     }
 }
